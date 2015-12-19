@@ -1,0 +1,16 @@
+.main-content {
+
+  transition: ease all .5s;
+  &.margin-top {
+    margin-top: 60px;
+    @media screen and (max-width: $navbar-break-point) {
+      margin-top: 110px;
+    }
+  }
+  &.extra {
+    margin-top: 130px;
+    @media screen and (max-width: $navbar-break-point) {
+      margin-top: 180px;
+    }
+  }
+}

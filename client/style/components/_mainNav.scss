@@ -1,0 +1,43 @@
+.main-user-nav {
+  transition: ease all .5s;
+  height: 0;
+  overflow: hidden;
+  &.active {
+    transition: ease all .5s;
+    height: 70px;
+  }
+
+  ul {
+    display: table;
+    width: 100%;
+    padding-top: 10px;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+    li {
+      text-align: center;
+      display: table-cell;
+      width: 20%;
+
+      a {
+        color: $white;
+        padding-bottom: 5px;
+        width: 100%;
+        text-decoration: none;
+        display: inline-block;
+        border-bottom: solid 3px transparent;
+        i {
+          font-size: 30px;
+        }
+        .text {
+          padding-top: 5px;
+          font-size: 12px;
+        }
+        &:hover {
+          border-color: $orange;
+        }
+      }
+    }
+  }
+
+}

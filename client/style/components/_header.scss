@@ -1,0 +1,147 @@
+header.main {
+  background-color: $violet;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 1px 5px 0px rgba($shade-color ,0.75);
+  .navbar {
+    margin-bottom: 0;
+    border: 0;
+  }
+  .nav .open > a {
+    background-color: transparent;
+    outline: none;
+    border-color: $orange;
+  }
+  .navbar-brand {
+    color: $white;
+
+    @media screen and (max-width: $navbar-break-point) {
+      width: 100%;
+      display: block;
+    }
+
+  }
+  ul.nav a {
+    color: $white;
+    @media (min-width: 768px) {
+      border-top: solid 3px transparent;
+      padding-top: 12px;
+      &:hover, &:focus {
+        border-color: $orange;
+      }
+      &.active {
+        border-color: $green;
+      }
+    }
+
+    &:hover, &:focus {
+      transition: ease all .5s;
+      background-color: transparentize($black, 0.95);
+      outline: none;
+    }
+  }
+  .btn-search {
+    background-color: transparent;
+    color: $white;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar-search {
+    .navbar-form-search {
+      background-color: $violet-light-1;
+      border-radius: 3px;
+      position: relative;
+      margin-right: 10px;
+      width: calc(70% - 150px);
+      margin-left: 7%;
+      margin-top: 8px;
+      @media screen and (max-width: $navbar-break-point) {
+        margin-left: 0%;
+        width: calc(100% - 70px);
+        float: right !important;
+        margin-bottom: 8px;
+      }
+      .form-group {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .search-form-group {
+    transition: ease all .5s;
+    width: 100%;
+    overflow: hidden;
+    &.active {
+      //width: calc( 50% - 200px ) !important;
+    }
+    input {
+      background-color: transparent;
+      color: #fff;
+      border: 0;
+      width: 100%;
+      &::-webkit-input-placeholder {
+        color: transparentize($white, .6);
+      }
+
+      &:-moz-placeholder { /* Firefox 18- */
+        color: transparentize($white, .6);
+      }
+
+      &::-moz-placeholder {  /* Firefox 19+ */
+        color: transparentize($white, .6);
+      }
+
+      &:-ms-input-placeholder {
+        color: transparentize($white, .6);
+      }
+    }
+  }
+
+  .navbar-nav {
+    position: relative;
+    z-index: 99;
+    &.navbar-primary {
+      @media screen and (max-width: $navbar-break-point) {
+        position: absolute;
+        right: 8px;
+      }
+    }
+  }
+  ul.nav .user-menu {
+    a {
+      border: 0;
+      padding: 5px;
+    }
+  }
+  .user-menu {
+
+    .img {
+      height: 40px;
+      width: 40px;
+      border-radius: 4px;
+      background: {
+        size: cover;
+        position: center;
+
+      }
+    }
+    .dropdown-menu {
+      right: 0;
+      left: auto;
+    }
+  }
+  .navbar-hamburger {
+    float: left;
+    margin: 14px;
+    line-height: 1;
+    height: 21px;
+    @media screen and (max-width: $navbar-break-point) {
+      position: absolute;
+      top: 50px;
+    }
+  }
+}
